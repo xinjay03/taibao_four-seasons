@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <!-- jquery -->
+	<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <!-- fontawesome字體庫 -->
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            background-image:url('sunset.jpeg') ;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+  			background-size: cover;
+           ;
+        }
+
+		p{
+		position:absolute;
+		margin-top: 3px;
+		margin-left: 3px;
+		
+	     z-index: 3;
+		 text-align: center;
+		 font-family:monospace;
+		 font-size: 30px;
+	   color: rgb(255, 255, 255);
+	
+		 background-clip: text;	
+		 background-size: cover;
+		 border-color: rgb(243, 242, 241);
+		 border-width: 3px; 
+		 border-style:solid ;
+
+		}
+		
+		.fa {
+			font-size: 10vh;
+		}
+
+        .swiper {
+           background-color: rgba(252, 252, 252, 0.315);		 	
+            width: 75vw;
+			margin: 0 auto;
+			vertical-align: middle;
+			position: relative;
+			overflow-x: scroll;
+			overflow-y: hidden;
+		margin-top: 30px;
+			
+        }
+
+        .swiper-container {
+            position: relative;
+            left: 0%;
+            width:100%; /* 三種圖片爲300% */
+            height: 100%;
+            display: flex;
+            transition: left 0.4s ease-in-out;/*等同於 cubic-bezier(0.42, 0, 0.58, 1.0) */
+        }
+
+        .swiper-item {
+            width: calc(100%/3);
+			padding-left: 350px;
+			padding-right: 370px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+
+        .butLeftCls {
+            position: absolute;
+            top: 25vh;
+            left: 0.5vw;
+            color: #fff;
+        }
+		.butLeftCls:hover{
+			color: rgb(247, 165, 73);
+		}
+
+        .butRightCls {
+            position: absolute;
+            top: 25vh;
+            right: 0.5vw;
+            color: #fff;
+        }
+		.butRightCls:hover{
+			color: rgb(247, 165, 73);
+		}
+
+        .spot {
+            padding: 1% 0;
+            display: flex;
+            text-align: center;
+            height: 30px;
+            background-color: #fbfbfb;
+            color: #848484;
+        }
+
+        .spot_01 {
+            flex: 1;
+        }
+
+        /* 選中後的字體顏色 */
+        .colCls {
+            color: #e4a389;
+        }
+
+        .colCls:after {
+            content: '';
+            height: 5px;
+            margin: 0 auto;
+            width: 20%;
+            position: relative;
+            bottom: -50%;
+            background-color: #e4ad89;
+            display: block;
+        }
+/*2*/
+		.swiper2-container {
+            position: relative;
+            left: 0%;
+            width:100%; /* 三種圖片爲300% */
+            height: 100%;
+            display: flex;
+            transition: left 0.4s ease-in-out;/*等同於 cubic-bezier(0.42, 0, 0.58, 1.0) */
+        }
+
+        .swiper2-item {
+            width: calc(100%/3);
+			padding-left: 350px;
+			padding-right: 370px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+
+        .butLeftCls2 {
+            position: absolute;
+            top: 25vh;
+            left: 0.5vw;
+            color: #fff;
+        }
+		.butLeftCls2:hover{
+			color: rgb(247, 165, 73);
+		}
+
+        .butRightCls2 {
+            position: absolute;
+            top: 25vh;
+            right: 0.5vw;
+            color: #fff;
+        }
+		.butRightCls2:hover{
+			color: rgb(247, 165, 73);
+		}
+
+        .spot_02 {
+            flex: 1;
+        }
+
+        /* 選中後的字體顏色 */
+        .colCls2 {
+            color: #e4a389;
+        }
+
+        .colCls2:after {
+            content: '';
+            height: 5px;
+            margin: 0 auto;
+            width: 20%;
+            position: relative;
+            bottom: -50%;
+            background-color: #e4ad89;
+            display: block;
+        }
+	/*03*/
+	.swiper3-container {
+            position: relative;
+            left: 0%;
+            width:100%; /* 三種圖片爲300% */
+            height: 100%;
+            display: flex;
+            transition: left 0.4s ease-in-out;/*等同於 cubic-bezier(0.42, 0, 0.58, 1.0) */
+        }
+
+        .swiper3-item {
+            width: calc(100%/3);
+			padding-left: 350px;
+			padding-right: 370px;
+		}
+
+        .butLeftCls3 {
+            position: absolute;
+            top: 25vh;
+            left: 0.5vw;
+            color: #fff;
+        }
+		.butLeftCls3:hover{
+			color: rgb(247, 165, 73);
+		}
+
+        .butRightCls3 {
+            position: absolute;
+            top: 25vh;
+            right: 0.5vw;
+            color: #fff;
+        }
+		.butRightCls3:hover{
+			color: rgb(247, 165, 73);
+		}
+
+        .spot_03 {
+            flex: 1;
+        }
+
+        /* 選中後的字體顏色 */
+        .colCls3 {
+            color: #e4a389;
+        }
+
+        .colCls3:after {
+            content: '';
+            height: 5px;
+            margin: 0 auto;
+            width: 20%;
+            position: relative;
+            bottom: -50%;
+            background-color: #e4ad89;
+            display: block;
+        }
+
+/*4*/
+		.swiper4-container {
+            position: relative;
+            left: 0%;
+            width:100%; /* 三種圖片爲300% */
+            height: 100%;
+            display: flex;
+            transition: left 0.4s ease-in-out;/*等同於 cubic-bezier(0.42, 0, 0.58, 1.0) */
+        }
+
+        .swiper4-item {
+            width: calc(100%/3);
+			padding-left: 350px;
+			padding-right: 370px;
+        }
+
+        .butLeftCls4 {
+            position: absolute;
+            top: 25vh;
+            left: 0.5vw;
+            color: #fff;
+        }
+		.butLeftCls4:hover{
+			color: rgb(247, 165, 73);
+		}
+
+        .butRightCls4 {
+            position: absolute;
+            top: 25vh;
+            right: 0.5vw;
+            color: #fff;
+        }
+		.butRightCls4:hover{
+			color: rgb(247, 165, 73);
+		}
+
+        .spot_04 {
+            flex: 1;
+        }
+
+        /* 選中後的字體顏色 */
+        .colCls4 {
+            color: #e4a389;
+        }
+
+        .colCls4:after {
+            content: '';
+            height: 5px;
+            margin: 0 auto;
+            width: 20%;
+            position: relative;
+            bottom: -50%;
+            background-color: #e4ad89;
+            display: block;
+        }
+    </style>
+</head>
+<body >
+	
+    <div class="swiper">
+		<P>SPRING</P>
+        <div class="swiper-container">
+			
+            <img class="swiper-item" src="春改/苦楝樹2.jpg" ondragstart="return false;">
+            <img class="swiper-item" src="春改/風鈴木.jpg" ondragstart="return false;">
+            <img class="swiper-item" src="春改/樹玫瑰.jpg" ondragstart="return false;">
+        </div>
+        <div class="butLeftCls" onClick='leftFun()'><i class="fa fa-angle-left"></i></div>
+        <div class="butRightCls" onClick='rightFun()'><i class="fa fa-angle-right"></i></div>
+        <div class="spot">
+            <div class="spot_01 colCls">苦楝樹</div>
+            <div class="spot_01">風鈴木</div>
+            <div class="spot_01">樹玫瑰</div>
+			
+			
+        </div>
+    </div>
+	
+	<div class="swiper">
+		<P>SUMMER	</P>
+        <div class="swiper2-container">
+            <img class="swiper2-item" src="夏改/太陽麻花2.jpg" ondragstart="return false;">
+            <img class="swiper2-item" src="夏改/波斯菊2.jpg" ondragstart="return false;">
+            <img class="swiper2-item" src="夏改/百日草.jpg" ondragstart="return false;">
+        </div>
+        <div class="butLeftCls2" onClick='leftFun2()'><i class="fa fa-angle-left"></i></div>
+        <div class="butRightCls2" onClick='rightFun2()'><i class="fa fa-angle-right"></i></div>
+        <div class="spot">
+            <div class="spot_02 colCls2">太陽麻花</div>
+            <div class="spot_02">波斯菊</div>
+            <div class="spot_02">百日草</div>		
+        </div>
+    </div>
+	
+	<div class="swiper">
+		<P>FALL	</P>
+        <div class="swiper3-container">
+            <img class="swiper3-item" src="秋改/向日葵2.jpg" ondragstart="return false;">
+            <img class="swiper3-item" src="秋改/欒樹.jpg" ondragstart="return false;">
+            <img class="swiper3-item" src="秋改/樹玫瑰.jpg" ondragstart="return false;">
+        </div>
+        <div class="butLeftCls3" onClick='leftFun3()'><i class="fa fa-angle-left"></i></div>
+        <div class="butRightCls3" onClick='rightFun3()'><i class="fa fa-angle-right"></i></div>
+        <div class="spot">
+            <div class="spot_03 colCls3">向日葵</div>
+            <div class="spot_03">欒樹</div>
+            <div class="spot_03">樹玫瑰</div>		
+        </div>
+    </div>
+	
+	<div class="swiper">
+		<P>WINTER	</P>
+        <div class="swiper4-container">
+            <img class="swiper4-item" src="冬改/油菜花.jpg" ondragstart="return false;">
+            <img class="swiper4-item" src="冬改/落羽松.jpg" ondragstart="return false;">
+            <img class="swiper4-item" src="冬改/樹玫瑰.jpg" ondragstart="return false;">
+        </div>
+        <div class="butLeftCls4" onClick='leftFun4()'><i class="fa fa-angle-left"></i></div>
+        <div class="butRightCls4" onClick='rightFun4()'><i class="fa fa-angle-right"></i></div>
+        <div class="spot">
+            <div class="spot_04 colCls4">油菜花</div>
+            <div class="spot_04">落羽松</div>
+            <div class="spot_04">樹玫瑰</div>		
+        </div>
+    </div>
+	
+    <script th:inline="javascript">
+
+		
+        $(document).ready(function () {
+			setTimeout('rightFun()', 2000);
+			// 加載按鈕id
+			setID();
+		});
+		var circleIndex = 0;
+
+		function setID() {
+			// 設置展開按鈕id
+			var circleList = document.getElementsByClassName('spot_01');
+			for (var i = 0; i < circleList.length; i++) {
+				circleList[i].onclick = function () {
+					arrowBack(this);
+				};
+				circleList[i].id = ('id', 'seeID_' + i);
+				circleIndex++;
+			}
+		}
+
+		// 根據按鈕下標切換圖片
+		function arrowBack(that) {
+			for (var i = 0; i < circleIndex; i++) {
+				if (that.id == 'seeID_' + i) {
+					$(that).addClass('colCls');
+
+					$('.swiper-container').css('left', -i * 100 + '%')
+
+					spotNum = i;
+					leftDistance = -i * 100;
+					// 如下爲一個圖片配置一次
+					// if (i == 0) { // 第一張圖片
+					//     $('.swiper-container').css('left','0')
+					//     leftDistance = 0
+					// }
+					// if (i == 1) { // 第二張圖片
+					//     $('.swiper-container').css('left','-100%')
+					//     leftDistance = -100
+					// }
+					// if (i == 2) { // 第三張圖片
+					//     $('.swiper-container').css('left','-200%')
+					//     leftDistance = -200
+					// }
+					// spotNum = i
+				} else if (that.id != 'seeID_' + i) {
+					$('#seeID_' + i).removeClass('colCls');
+				}
+			}
+		}
+
+		var leftDistance = 0; // 滑動的left
+		var spotNum = 0;
+		var spotList = $('.spot_01').length;
+
+		function leftFun() {
+			if (leftDistance == 0) {
+				// 三張圖片 -200%
+				$('.swiper-container').css('left', '-200%');
+				leftDistance = -200;
+				spotNum = spotList - 1;
+			} else {
+				spotNum--;
+				leftDistance += 100;
+				$('.swiper-container').css('left', leftDistance + '%');
+			}
+			for (var i = 0; i < spotList; i++) {
+				if (i == spotNum) {
+					$('#seeID_' + i).addClass('colCls');
+				} else {
+					$('#seeID_' + i).removeClass('colCls');
+				}
+			}
+		}
+
+		var interval;
+
+		function rightFun() {
+
+			clearInterval(interval);
+
+			// -200 三張圖片
+			if (leftDistance == -200) {
+				leftDistance = 0;
+				spotNum = 0;
+				$('.swiper-container').css('left', '0%');
+			} else {
+				spotNum++
+				leftDistance -= 100;
+				$('.swiper-container').css('left', leftDistance + '%')
+			}
+
+			if (spotNum >= spotList) {
+				spotNum = 0
+			}
+			for (var i = 0; i < spotList; i++) {
+				if (i == spotNum) {
+					$('#seeID_' + i).addClass('colCls');
+				} else {
+					$('#seeID_' + i).removeClass('colCls');
+				}
+			}
+
+			interval = setInterval('rightFun()', 2500);
+		}
+//SPOT2
+		$(document).ready(function () {
+			setTimeout('rightFun2()', 2000);
+			// 加載按鈕id
+			setID2();
+		});
+		var circleIndex2 = 0;
+
+		function setID2() {
+			// 設置展開按鈕id
+			var circleList2 = document.getElementsByClassName('spot_02');
+			for (var i = 0; i < circleList2.length; i++) {
+				circleList2[i].onclick = function () {
+					arrowBack2(this);
+				};
+				circleList2[i].id = ('id', 'seeID2_' + i);
+				circleIndex2++;
+			}
+		}
+
+		// 根據按鈕下標切換圖片
+		function arrowBack2(that) {
+			for (var i = 0; i < circleIndex2; i++) {
+				if (that.id == 'seeID2_' + i) {
+					$(that).addClass('colCls2');
+
+					$('.swiper2-container').css('left', -i * 100 + '%')
+
+					spotNum2 = i;
+					leftDistance2 = -i * 100;
+					// 如下爲一個圖片配置一次
+					// if (i == 0) { // 第一張圖片
+					//     $('.swiper-container').css('left','0')
+					//     leftDistance = 0
+					// }
+					// if (i == 1) { // 第二張圖片
+					//     $('.swiper-container').css('left','-100%')
+					//     leftDistance = -100
+					// }
+					// if (i == 2) { // 第三張圖片
+					//     $('.swiper-container').css('left','-200%')
+					//     leftDistance = -200
+					// }
+					// spotNum = i
+				} else if (that.id != 'seeID2_' + i) {
+					$('#seeID2_' + i).removeClass('colCls2');
+				}
+			}
+		}
+
+		var leftDistance2 = 0; // 滑動的left
+		var spotNum2 = 0;
+		var spotList2 = $('.spot_02').length;
+
+		function leftFun2() {
+			if (leftDistance2 == 0) {
+				// 三張圖片 -200%
+				$('.swiper2-container').css('left', '-200%');
+				leftDistance2 = -200;
+				spotNum2 = spotList2 - 1;
+			} else {
+				spotNum2--;
+				leftDistance2 += 100;
+				$('.swiper2-container').css('left', leftDistance2 + '%');
+			}
+			for (var i = 0; i < spotList2; i++) {
+				if (i == spotNum2) {
+					$('#seeID2_' + i).addClass('colCls2');
+				} else {
+					$('#seeID2_' + i).removeClass('colCls2');
+				}
+			}
+		}
+
+		var interval2;
+
+		function rightFun2() {
+
+			clearInterval(interval2);
+
+			// -200 三張圖片
+			if (leftDistance2 == -200) {
+				leftDistance2 = 0;
+				spotNum2 = 0;
+				$('.swiper2-container').css('left', '0%');
+			} else {
+				spotNum2++
+				leftDistance2 -= 100;
+				$('.swiper2-container').css('left', leftDistance2 + '%')
+			}
+
+			if (spotNum2 >= spotList2) {
+				spotNum2 = 0
+			}
+			for (var i = 0; i < spotList2; i++) {
+				if (i == spotNum2) {
+					$('#seeID2_' + i).addClass('colCls2');
+				} else {
+					$('#seeID2_' + i).removeClass('colCls2');
+				}
+			}
+
+			interval2 = setInterval('rightFun2()', 2500);
+		}
+//SPOT3
+		$(document).ready(function () {
+			setTimeout('rightFun3()', 2000);
+			// 加載按鈕id
+			setID3();
+		});
+		var circleIndex3 = 0;
+
+		function setID3() {
+			// 設置展開按鈕id
+			var circleList3 = document.getElementsByClassName('spot_03');
+			for (var i = 0; i < circleList3.length; i++) {
+				circleList3[i].onclick = function () {
+					arrowBack3(this);
+				};
+				circleList3[i].id = ('id', 'seeID3_' + i);
+				circleIndex3++;
+			}
+		}
+
+		// 根據按鈕下標切換圖片
+		function arrowBack3(that) {
+			for (var i = 0; i < circleIndex3; i++) {
+				if (that.id == 'seeID3_' + i) {
+					$(that).addClass('colCls3');
+
+					$('.swiper3-container').css('left', -i * 100 + '%')
+
+					spotNum3 = i;
+					leftDistance3 = -i * 100;
+					// 如下爲一個圖片配置一次
+					// if (i == 0) { // 第一張圖片
+					//     $('.swiper-container').css('left','0')
+					//     leftDistance = 0
+					// }
+					// if (i == 1) { // 第二張圖片
+					//     $('.swiper-container').css('left','-100%')
+					//     leftDistance = -100
+					// }
+					// if (i == 2) { // 第三張圖片
+					//     $('.swiper-container').css('left','-200%')
+					//     leftDistance = -200
+					// }
+					// spotNum = i
+				} else if (that.id != 'seeID3_' + i) {
+					$('#seeID3_' + i).removeClass('colCls3');
+				}
+			}
+		}
+
+		var leftDistance3 = 0; // 滑動的left
+		var spotNum3 = 0;
+		var spotList3 = $('.spot_03').length;
+
+		function leftFun3() {
+			if (leftDistance3 == 0) {
+				// 三張圖片 -200%
+				$('.swiper3-container').css('left', '-200%');
+				leftDistance3 = -200;
+				spotNum3 = spotList3 - 1;
+			} else {
+				spotNum3--;
+				leftDistance3 += 100;
+				$('.swiper3-container').css('left', leftDistance3 + '%');
+			}
+			for (var i = 0; i < spotList3; i++) {
+				if (i == spotNum3) {
+					$('#seeID3_' + i).addClass('colCls3');
+				} else {
+					$('#seeID3_' + i).removeClass('colCls3');
+				}
+			}
+		}
+
+		var interval3;
+
+		function rightFun3() {
+
+			clearInterval(interval3);
+
+			// -200 三張圖片
+			if (leftDistance3 == -200) {
+				leftDistance3 = 0;
+				spotNum3 = 0;
+				$('.swiper3-container').css('left', '0%');
+			} else {
+				spotNum3++
+				leftDistance3 -= 100;
+				$('.swiper3-container').css('left', leftDistance3 + '%')
+			}
+
+			if (spotNum3 >= spotList3) {
+				spotNum3 = 0
+			}
+			for (var i = 0; i < spotList3; i++) {
+				if (i == spotNum3) {
+					$('#seeID3_' + i).addClass('colCls3');
+				} else {
+					$('#seeID3_' + i).removeClass('colCls3');
+				}
+			}
+
+			interval3 = setInterval('rightFun3()', 2500);
+		}
+//SPOT4
+		$(document).ready(function () {
+			setTimeout('rightFun4()', 2000);
+			// 加載按鈕id
+			setID4();
+		});
+		var circleIndex4 = 0;
+
+		function setID4() {
+			// 設置展開按鈕id
+			var circleList4 = document.getElementsByClassName('spot_04');
+			for (var i = 0; i < circleList4.length; i++) {
+				circleList4[i].onclick = function () {
+					arrowBack4(this);
+				};
+				circleList4[i].id = ('id', 'seeID4_' + i);
+				circleIndex4++;
+			}
+		}
+
+		// 根據按鈕下標切換圖片
+		function arrowBack4(that) {
+			for (var i = 0; i < circleIndex4; i++) {
+				if (that.id == 'seeID4_' + i) {
+					$(that).addClass('colCls4');
+
+					$('.swiper4-container').css('left', -i * 100 + '%')
+
+					spotNum4 = i;
+					leftDistance4 = -i * 100;
+					// 如下爲一個圖片配置一次
+					// if (i == 0) { // 第一張圖片
+					//     $('.swiper-container').css('left','0')
+					//     leftDistance = 0
+					// }
+					// if (i == 1) { // 第二張圖片
+					//     $('.swiper-container').css('left','-100%')
+					//     leftDistance = -100
+					// }
+					// if (i == 2) { // 第三張圖片
+					//     $('.swiper-container').css('left','-200%')
+					//     leftDistance = -200
+					// }
+					// spotNum = i
+				} else if (that.id != 'seeID4_' + i) {
+					$('#seeID4_' + i).removeClass('colCls4');
+				}
+			}
+		}
+
+		var leftDistance4 = 0; // 滑動的left
+		var spotNum4 = 0;
+		var spotList4 = $('.spot_04').length;
+
+		function leftFun4() {
+			if (leftDistance4 == 0) {
+				// 三張圖片 -200%
+				$('.swiper4-container').css('left', '-200%');
+				leftDistance4 = -200;
+				spotNum4 = spotList4 - 1;
+			} else {
+				spotNum4--;
+				leftDistance4 += 100;
+				$('.swiper4-container').css('left', leftDistance4 + '%');
+			}
+			for (var i = 0; i < spotList4; i++) {
+				if (i == spotNum4) {
+					$('#seeID4_' + i).addClass('colCls4');
+				} else {
+					$('#seeID4_' + i).removeClass('colCls4');
+				}
+			}
+		}
+
+		var interval4;
+
+		function rightFun4() {
+
+			clearInterval(interval4);
+
+			// -200 三張圖片
+			if (leftDistance4 == -200) {
+				leftDistance4 = 0;
+				spotNum4 = 0;
+				$('.swiper4-container').css('left', '0%');
+			} else {
+				spotNum4++
+				leftDistance4 -= 100;
+				$('.swiper4-container').css('left', leftDistance4 + '%')
+			}
+
+			if (spotNum4 >= spotList4) {
+				spotNum4 = 0
+			}
+			for (var i = 0; i < spotList4; i++) {
+				if (i == spotNum4) {
+					$('#seeID4_' + i).addClass('colCls4');
+				} else {
+					$('#seeID4_' + i).removeClass('colCls4');
+				}
+			}
+
+			interval4 = setInterval('rightFun4()', 2500);
+		}
+    </script>
+</body>
+</html>
